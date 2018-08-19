@@ -28,6 +28,9 @@ moveShelves = (book, shelf) => {
        books={this.state.books}
        moveShelves={this.moveShelves}
        />
+      {/*<Search
+      moveShelves={this.moveShelves}
+      />*/}
       </div>
 )
     }
