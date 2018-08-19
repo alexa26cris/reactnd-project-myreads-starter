@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import Search from './Search';
 import MainPage from './MainPage';
 import * as BooksAPI from './BooksAPI';
@@ -24,13 +25,20 @@ moveShelves = (book, shelf) => {
   render() {
     return (
       <div className="app">
-      <MainPage 
+      <Route exact path='/' render={() => {
+    return (
+       <MainPage 
        books={this.state.books}
        moveShelves={this.moveShelves}
        />
-      {/*<Search
-      moveShelves={this.moveShelves}
-      />*/}
+)} />
+     <Route path='/search' render={() => (
+       return (
+       <Search 
+       moveShelves={this.moveShelves}
+       books={this.state.books}
+       />
+)} />
       </div>
 )
     }
