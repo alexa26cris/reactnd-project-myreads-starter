@@ -4,6 +4,7 @@ The goal of this project from Udacity is to add interactivity to an app by using
 * Want to read 
 * Currently reading 
 * Read 
+
 App also has a 'Search' page, which allows users to search and select books for his collections. Both pages show a control (tied to each book instance) that allows users to move books between shelves.
 
 ## How to run:
