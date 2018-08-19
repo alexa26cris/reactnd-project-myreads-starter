@@ -1,6 +1,10 @@
 # MyReads Project
 
-The goal of this project from Udacity is to add interactivity to an app by using React and by refactoring the static code provided by Udacity and Google. This app displays a list of books that are sorted into three shelves: 'want to read', 'currently reading' and 'read'. App also has a 'Search' page, which allows users to search and select books for his collections. Both pages show a control (tied to each book instance) that allows users to move books between shelves.
+The goal of this project from Udacity is to add interactivity to an app by using React and by refactoring the static code provided by Udacity and Google. This app displays a list of books that are sorted into three shelves: 
+* Want to read 
+* Currently reading 
+* Read 
+App also has a 'Search' page, which allows users to search and select books for his collections. Both pages show a control (tied to each book instance) that allows users to move books between shelves.
 
 ## How to run:
 
