@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 import * as BooksAPI from './BooksAPI';
 import Book from './Book';
   
@@ -43,12 +43,14 @@ updateQuery = (query) => {
             <div className="search-books-results">
               <ol className="books-grid">
               {this.state.searchedBooks.map} (
-                searchedBooks => (
-                  <li key={searchedBooks.id}>
+                searchedBook => (
+                  <li key={searchedBook.id}>
                 <Book
-                book={searchedBooks}
+                book={searchedBook}  
+                moveShelves={this.props.moveShelves}
                 />
                 </li>
+                 ))
               </ol>
             </div>
           </div>
