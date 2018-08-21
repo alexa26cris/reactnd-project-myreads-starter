@@ -8,11 +8,11 @@ render () {
 return (
           <div className="book">
              <div className="book-top">
-                  <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'url("${displayThumbnail}"' }}></div>
+                  <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${displayThumbnail}"` }}></div>
                             <div className="book-shelf-changer">
                               <select
-onChange={(event) => this.props.moveShelves(this.props.book, event.target.value)}
-value={this.props.currentShelf}
+onChange={(event) => this.props.moveShelf(this.props.book, event.target.value)}
+value={this.props.book.shelf || 'none'}
 >
                                 <option value="move" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
