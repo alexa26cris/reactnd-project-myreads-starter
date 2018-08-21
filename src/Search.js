@@ -15,6 +15,7 @@ updateQuery = (query) => {
   this.updateSearchedBooks(query);
 }
   updateSearchedBooks = (query) => {
+    {
     if (query)
     BooksAPI.search(query).then((searchedBooks) => {
       if (searchedBooks.error) {
@@ -23,7 +24,7 @@ updateQuery = (query) => {
       this.setState({ searchedBooks: searchedBooks });
  } 
     })
-  } else {
+  } {
   this.setState ({searchedBooks: [] });
 }
 }
@@ -50,13 +51,14 @@ updateQuery = (query) => {
                let shelf="none";
                this.props.books.map(book => (
                book.id === searchedBook.id ?
-               shelf = book.shelf :
+               book.shelf = book.shelf :
                ''
                ));
                return (
                   <li key={searchedBook.id}>
                 <Book
-                book={searchedBooks}
+                book={searchedBook}
+                moveShelf={this.props.moveShelf}
                 />
                 </li>
 ); 
